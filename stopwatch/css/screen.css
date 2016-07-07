@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700,700italic);
+
+body { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; color: #555; margin: 0; padding: 0; }
+
+#page { max-width: 100%; margin: 0 auto; position: relative; 
+	box-sizing: border-box;
+	height: 100vh; overflow: hidden;
+}
+
+/* Special Globals 
+================== */
+
+.hidden { height: 0; }
+
+.block-on { display: block; }
+.block-off { display: none; }
+
+/* prevent text selection */
+
+.noselect, .btn, .numkey, header {
+  cursor: default;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -o-user-select: none;		   /* Opera */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+  outline-style:none;		   /*IE*/
+}
+
+/* Text 
+======= */
+
+h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700; }
+
+/* Header 
+========= */
+
+header { height: 10vh; background: #3333CC; position: relative; }
+header:hover { background: #2A29A7; }
+
+header h1 { text-align: center; font-size: 7vh; color: #cccccc}
+
+/* Sections - common 
+==================== */
+
+section { padding: 0; height: 90vh;
+	overflow: hidden;
+    -webkit-transition: height 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.5s;
+    /*
+    	http://www.w3schools.com/css/css3_transitions.asp
+    */
+}
+section::after{ content: ''; display: block; clear: both; }
+
+/* Section - Selector 
+--------------------- */
+
+section#selector { position: relative; 
+	padding:0; margin:0; background-color: #fff; 
+}
+
+div.arrow-box, div #separator { 
+    position: relative;
+    float:left;
+    display:block;
+    box-sizing: border-box;
+}
+
+div.arrow-box { height: inherit; width: 49%; }
+
+div #separator { 
+	width: 2%; height: 80vh; margin-top: 5vh;	
+	border: 4px solid #000; border-radius: 25px; 
+	background: #444;
+}
+
+/* centering img (arrow) inside the responcive div */
+
+.img-dummy {
+    padding-top: 100%; /* forces 1:1 aspect ratio */
+}
+
+.img-container {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    text-align:center; /* Align center inline elements */
+    font: 0/0 a;
+}
+
+.img-container:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.img-container img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.arrow-box img { height: 40vh; width: 40vw; }
+.arrow-box img:hover { opacity: .7; } 
+
+/* Section - Timer 
+================== */
+
+/* Div : Display 
+---------------- */
+
+.display { 
+	position: relative;
+	margin: 10vh auto;
+	height: 30vmin;
+	width: 90vmin;
+	border: 2vmin solid #000; 
+	border-radius: 7vmin; 
+	background: #e1e2ff;
+}
+
+.display p {
+	text-align: center; font-size: 20vmin; font-weight: 700; color: #000;
+	line-height: 23vmin;
+	margin: 0;
+}
+
+.display .miliseconds {
+	font-size: 4vmin;
+	line-height: 4vmin;
+}
+
+/* Div: Controls, Numpad 
+======================== */
+
+/* Basic buttons 
+---------------- */
+
+.btn { 
+	position: absolute;
+	text-align: center; font-size: 5vmin; font-weight: 700; color: #000;
+	border: 1.5vmin solid #000; 
+	border-radius: 7vmin; 
+	width: 30vmin;
+}
+
+.btn.green { background: #41FF7B; }
+.btn.green:hover { background: #2EB757; }
+
+.btn.blue { background-color:  #0099ff; }
+.btn.blue:hover { background-color:   #0066cc; }
+
+.btn.clear { background: #FF7B41; }
+.btn.clear:hover { background: #CC6232; }
+
+/* Controls (Start / Clear) 
+--------------------------- */
+
+#controls { position: relative; margin: 10vmin auto; width: 90vmin; }
+
+#controls .btn.green,
+#controls .btn.blue,
+#controls .btn.clear { top: 0; }
+
+#controls .btn.green,
+#controls .btn.blue { left: 0; }
+
+#controls .btn.clear { right: 0; }
+
+/* Numpad 
+--------- */
+
+#numpad { position: relative; margin: 10vmin auto; width: 90vmin; }
+
+#numpad aside { width: 50%; float: left; }
+
+#numpad .btn.green,
+#numpad .btn.blue,
+#numpad .btn.clear { right: 0; }
+
+#numpad .btn.green,
+#numpad .btn.blue {  top: 0; }
+
+#numpad .btn.clear { top: 10vmin; }
+
+.numkeys { clear: both; }
+
+.numkey {
+	float:left;
+	text-align: center; font-size: 5vmin; font-weight: 700; color: #000;
+	width: 7vmin; height: 8vmin; display: box;
+	padding: 0 1vmin;
+	margin: 1vmin 1vmin;
+	border: 2px solid #000; 
+	border-radius: 1vmin; 
+	background: #41FF7B;
+	box-sizing: border-box;	
+}
+.numkey:hover { background: #35D365; }

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stopwatch</title>
+	<link rel="stylesheet" type="text/css" href="css/screen.css">
+</head>
+<body>
+	<div id="page">
+		<header id="header">
+				<h1>Stopwatch</h1>
+		</header>
+
+		<section id="selector">
+
+			<div class="arrow-box">
+			    <div class="img-dummy"></div>
+				<div class="img-container">
+					<img id="arrow-up" src="images/arrow_up.svg">
+				</div>
+			</div>
+
+			<div id="separator"></div>
+
+			<div class="arrow-box">
+			    <div class="img-dummy"></div>
+				<div class="img-container">
+					<img id="arrow-down" src="images/arrow_down.svg">
+				</div>
+			</div>
+
+		</section>
+
+		<section id="timer">
+
+			<div class="display">
+				<p id="up-value" class="noselect">00:00:00</p>
+				<p id="up-miliseconds" class="miliseconds noselect">0</p>
+			</div>
+
+			<div id="controls" class="block-on">
+				<div id="btn-start" class="btn">Start</div>
+				<div id="btn-clear" class="btn clear">Clear</div>
+			</div>
+
+			<div id="numpad" class="block-off">
+				<aside>
+					<div class="numkeys">
+						<div id="nk0" class="numkey">0</div>
+						<div id="nk1" class="numkey">1</div>
+						<div id="nk2" class="numkey">2</div>
+						<div id="nk3" class="numkey">3</div>
+						<div id="nk4" class="numkey">4</div>
+					</div>
+
+					<div class="numkeys">
+						<div id="nk5" class="numkey">5</div>
+						<div id="nk6" class="numkey">6</div>
+						<div id="nk7" class="numkey">7</div>
+						<div id="nk8" class="numkey">8</div>
+						<div id="nk9" class="numkey">9</div>
+					</div>
+				</aside>
+
+				<aside>
+					<div id="btn-set" class="btn green">Set</div>
+					<div id="btn-set-clear" class="btn clear">Clear</div>
+				</aside>
+			</div>
+
+		</section>
+
+
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
