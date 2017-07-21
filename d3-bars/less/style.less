@@ -1,0 +1,223 @@
+/**************************
+* OUTSIDE REFERRED
+*/
+@TICKFONTSIZE:  3vmin;   // Referenced by appCtrl
+@TITLEFONTSIZE: 4vmin;  // Referenced by appCtrl
+
+
+/**************************
+* COLOR PALETTE
+  #696969 - Dim Gray
+  #666666 - Gray40 (web safe to Dim Gray)
+  #0066cc - Blue (web safe)
+***/
+@Gray:  #666666; // Gray40 (web safe to Dim Gray)
+@Blue:  #0066cc; // Blue (web safe)
+@Red:   red;
+
+@BarColor:    ;//@Red; // Empty it causes JSON-defined colors
+@BarOpacity:  ;//1;    // Empty it causes D3 defaults
+
+
+/************************
+* Spinner - loading indicator
+*/
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: @Blue;//#333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+/**************************
+* Main field ajustments
+*/
+#tabs{
+    margin: 5vh 10vw 5vh 10vw;
+//    padding: 1vw 1vh 0px 1vw;
+//    background-color: #CCC;
+}
+
+
+/**************************
+* Titles of the tabs makeup
+*/
+ul {
+    list-style: none;
+    padding: 0;
+//    margin: 0 0 0 20px;
+}
+
+li {
+    float: left;
+    color: @Gray;
+    font-size: 4vmin;
+//    border: 1px solid #000;
+//    border-bottom-width: 0;
+//    margin: 3px 3px 0px 3px; 
+//    padding: 5px 5px 0px 5px;
+//    background-color: #CCC;
+}
+
+/* Titles of the tabs separator */
+li + li:before{
+    content: "|";
+    padding: 0 1.5vw;
+    color: @Gray;
+    font-weight: normal;
+}
+
+.active {
+    color: @Blue;
+//    background-color: #FFF;
+//    font-weight: bold;
+}
+
+#chartTitle{
+  margin: 0 !important; 
+  padding: 4vh 0 4vh 0 !important;
+  font-size: 6vmin;
+}
+
+
+/**************************
+* Chart box makeup
+*/
+
+#chartView {
+  clear: both;
+//  border: 1px solid black;
+//  padding: 0 1em;
+//  height: 500px;
+}
+
+
+/************************
+* Additional NVD3 makeup.
+*/
+
+/*-------------------------------------------
+    Syntax examples for NVD3 chart elements 
+
+    .nv-y .tick{
+      fill: blue;
+    }
+
+    .nv-y .nv-axisMaxMin{
+      fill: blue;
+    }
+
+    .nv-x .tick text{
+      fill: blue;
+      font-size: 1.5em;
+    }
+    
+    .nv-y text{
+      fill: red;
+    }
+
+    .nv-x text{
+      fill: blue;
+      font-size: 22px;
+    }
+.nv-x .tick text,
+.nv-y .tick text,
+.nvd3 .nv-axis .nv-axisMaxMin text {
+  font-weight: normal;
+  fill: blue;
+  font-size: 1.5em;
+}
+
+.tick {
+  display: none;
+}
+
+svg{
+  border: 1px solid #000;
+}
+
+---------------------------------------------*/
+/* Clear the rule /
+.nvd3 text {
+  all: initial;
+  * {
+    all: unset;
+  }
+}
+*/
+
+/* Common format for ticks text */
+.tick text,
+.nvd3 text,
+.nvd3 .nv-axis .nv-axisMaxMin text {
+  font: normal @TICKFONTSIZE Arial !important;
+  fill: @Blue;
+}
+
+/* Axis title text */
+.nv-y .nv-axislabel{
+  font-size: @TITLEFONTSIZE !important; // Referenced by "redrawChart" of appCtrl
+  fill: @Blue;
+}
+
+/* Remove the verticals from the greed */
+.nv-x .tick line {
+  display: none;
+}
+
+/* Rewrite bars color */
+rect.discreteBar {
+  fill: @BarColor;
+  fill-opacity: @BarOpacity;
+}
+
+/************************
+* Tune bars of the chart
+*/
+.nv-bar.positive rect {
+//  width: 5vw;
+//  filter:url(#myshadow);
+}
+.nvd3 .nv-multibar .nv-groups rect,
+.nvd3 .nv-multibarHorizontal .nv-groups rect,
+.nvd3 .nv-discretebar .nv-groups rect {
+//  stroke-opacity: 1 !important; 
+//  border-right: 2px solid;
+//  clip:rect(10px, 155px, 145px, 10px);
+}
+
