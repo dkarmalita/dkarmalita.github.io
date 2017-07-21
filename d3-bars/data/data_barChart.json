@@ -1,0 +1,78 @@
+{
+  "chartType": "barChart",
+  "tabs": [
+    {
+      "tabHeader": "first",
+      "mainTitle": "Samlet",
+      "secondTitle": "Sådan var der investeret 31. december 2015",
+      "showLegend": false,
+      "yLabel": "Gennemsnitlig tilfredshed (1-5)",
+      "horizontalLine": {
+        "y": "2",
+        "color": "#0066cc"
+      },
+      "dataset": [
+        {
+          "year": "2010",
+          "value": "3.6",
+          "color": "#0066cc"
+        },
+        {
+          "year": "2011",
+          "value": "3.7",
+          "color": "#0066cc"
+        },
+        {
+          "year": "2012",
+          "value": "3.8"
+        },
+        {
+          "year": "2013",
+          "value": "3.9",
+          "color": "#0066cc"
+        },
+        {
+          "year": "2014",
+          "value": "4.0",
+          "color": "#0066cc"
+        },
+        {
+          "year": "2015",
+          "value": "4.2",
+          "color": "#0066cc"
+        }
+      ]
+    },
+    {
+      "tabHeader": "Second tab",
+      "mainTitle": "Second",
+      "secondTitle": "Second",
+      "dataset": [
+        {
+          "year": "2010",
+          "value": "8.6"
+        },
+        {
+          "year": "2011",
+          "value": "3.7"
+        },
+        {
+          "year": "2012",
+          "value": "3.8"
+        },
+        {
+          "year": "2013",
+          "value": "3.9"
+        },
+        {
+          "year": "2014",
+          "value": "4.0"
+        },
+        {
+          "year": "2015",
+          "value": "4.2"
+        }
+      ]
+    }
+  ]
+}
